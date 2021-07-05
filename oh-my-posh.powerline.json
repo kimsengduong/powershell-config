@@ -1,0 +1,71 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#FFEE58",
+          "style": "plain",
+          "type": "root"
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "type": "session"
+        },
+        {
+          "background": "#91ddff",
+          "foreground": "#100e23",
+          "powerline_symbol": "",
+          "properties": {
+            "prefix": " \uE5FF ",
+            "style": "folder"
+          },
+          "style": "powerline",
+          "type": "path"
+        },
+        {
+          "background": "#95ffa4",
+          "foreground": "#193549",
+          "powerline_symbol": "",
+          "style": "powerline",
+          "type": "git",
+          "properties": {
+            "ahead_and_behind_color": "#f26d50",
+            "ahead_color": "#89d1dc",
+            "behind_color": "#f17c37",
+            "display_stash_count": true,
+            "display_upstream_icon": true,
+            "local_changes_color": "#ff9248",
+            "stash_count_icon": " ",
+            "status_colors_enabled": true,
+            "display_status": true
+          }
+        },
+        {
+          "background": "#906cff",
+          "foreground": "#100e23",
+          "powerline_symbol": "",
+          "properties": {
+            "prefix": "  "
+          },
+          "style": "powerline",
+          "type": "python"
+        },
+        {
+          "background": "#ff8080",
+          "foreground": "#ffffff",
+          "powerline_symbol": "",
+          "properties": {
+            "prefix": ""
+          },
+          "style": "powerline",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true
+}
