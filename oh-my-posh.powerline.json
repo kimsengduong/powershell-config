@@ -27,13 +27,13 @@
         },
         {
           "background": "#36FD87",
-          "foreground": "#193549",
+          "foreground": "#52f1e4",
           "powerline_symbol": "",
           "style": "powerline",
           "type": "git",
           "properties": {
             "ahead_and_behind_color": "#f26d50",
-            "ahead_color": "#E434E9",
+            "ahead_color": "#CF61F0",
             "behind_color": "#f17c37",
             "display_stash_count": true,
             "display_upstream_icon": true,
