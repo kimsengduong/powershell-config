@@ -6,7 +6,11 @@ Import-Module oh-my-posh
 ```
 
 ```bash
-cp .\oh-my-posh.powerline.json ~\Documents\WindowsPowerShell
+mkdir ~\Documents\WindowsPowerShell\oh-my-posh-themes
+```
+
+```bash
+cp .\oh-my-posh.geekie.json ~\Documents\WindowsPowerShell\oh-my-posh-themes
 ```
 
 ```bash
@@ -14,5 +18,5 @@ notepad $PROFILE.AllUsersAllHosts
 ```
 
 ```bash
-Set-PoshPrompt -Theme ~\Documents\WindowsPowerShell\oh-my-posh.powerline.json
+Set-PoshPrompt -Theme ~\Documents\WindowsPowerShell\oh-my-posh-themes\oh-my-posh.geekie.json
 ```

@@ -3,16 +3,24 @@
   "blocks": [
     {
       "alignment": "left",
+      "newline": true,
       "segments": [
         {
-          "foreground": "#FFEE58",
+          "type": "root",
           "style": "plain",
-          "type": "root"
+          "foreground": "#26C6DA",
+          "properties": {
+            "root_icon": ""
+          }
         },
         {
           "foreground": "#ffffff",
           "style": "plain",
-          "type": "session"
+          "type": "session",
+          "properties": {
+            "display_host": false,
+            "user_color": "#dce470"
+          }
         },
         {
           "background": "#91ddff",
@@ -40,7 +48,8 @@
             "local_changes_color": "#ff9248",
             "stash_count_icon": " ",
             "status_colors_enabled": true,
-            "display_status": true
+            "display_status": true,
+            "commit_icon": ""
           }
         },
         {
