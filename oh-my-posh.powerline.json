@@ -26,14 +26,14 @@
           "type": "path"
         },
         {
-          "background": "#95ffa4",
+          "background": "#36FD87",
           "foreground": "#193549",
           "powerline_symbol": "",
           "style": "powerline",
           "type": "git",
           "properties": {
             "ahead_and_behind_color": "#f26d50",
-            "ahead_color": "#89d1dc",
+            "ahead_color": "#E434E9",
             "behind_color": "#f17c37",
             "display_stash_count": true,
             "display_upstream_icon": true,
