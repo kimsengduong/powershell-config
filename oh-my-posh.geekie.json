@@ -7,7 +7,7 @@
       "segments": [
         {
           "type": "root",
-          "style": "plain",
+          "style": "diamond",
           "foreground": "#26C6DA",
           "properties": {
             "root_icon": ""
