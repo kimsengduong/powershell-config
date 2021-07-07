@@ -7,7 +7,11 @@
       "segments": [
         {
           "type": "root",
+<<<<<<< HEAD
           "style": "powerline",
+=======
+          "style": "diamond",
+>>>>>>> 9df3fcf8e493640e3a40a30385a7650d192dfee0
           "foreground": "#26C6DA",
           "properties": {
             "root_icon": ""
