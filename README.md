@@ -20,3 +20,8 @@ notepad $PROFILE.AllUsersAllHosts
 ```bash
 Set-PoshPrompt -Theme ~\Documents\WindowsPowerShell\oh-my-posh-themes\oh-my-posh.geekie.json
 ```
+
+```powershell
+if (!(Test-Path -Path $PROFILE)) { New-Item -ItemType File -Path $PROFILE -Force }
+Start-Process powershell -Verb runAs
+```
