@@ -8,31 +8,31 @@
 
 ### Install Oh My Posh
 
-```bash
+```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
 ```
 
 ### Clone Config
 
-```bash
+```powershell
 git clone git@github.com:duongkimseng/powershell-config.git
 ```
 
 ### Copy file "oh-my-posh.geekie.json" to POSH_THEMES_PATH
 
-```bash
+```powershell
 cp .\powershell-config\oh-my-posh.geekie.json  $env:POSH_THEMES_PATH
 ```
 
 ### Setup Default Profile
 
-```bash
+```powershell
 notepad $PROFILE.AllUsersAllHosts
 ```
 
 ### Paste this script into the Profile
 
-```bash
+```powershell
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/oh-my-posh.geekie.json" | Invoke-Expression
 ```
 
