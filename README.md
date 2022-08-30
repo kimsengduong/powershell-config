@@ -1,24 +1,39 @@
 # Powershell-Config
 
-```bash
-Install-Module oh-my-posh -Scope AllUsers
-Import-Module oh-my-posh
-```
+### Download PowerShell 7
+
+[Powershell Download](https://github.com/PowerShell/PowerShell)
+
+### Run PWSH (PowerShell 7) as Admin
+
+### Install Oh My Posh
 
 ```bash
-mkdir ~\Documents\WindowsPowerShell\oh-my-posh-themes
+Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
 ```
 
+### Clone Config
+
 ```bash
-cp .\oh-my-posh.geekie.json ~\Documents\WindowsPowerShell\oh-my-posh-themes
+git clone git@github.com:duongkimseng/powershell-config.git
 ```
+
+### Copy file "oh-my-posh.geekie.json" to POSH_THEMES_PATH
+
+```bash
+cp .\powershell-config\oh-my-posh.geekie.json  $env:POSH_THEMES_PATH
+```
+
+### Setup Default Profile
 
 ```bash
 notepad $PROFILE.AllUsersAllHosts
 ```
 
+### Paste this script into the Profile
+
 ```bash
-Set-PoshPrompt -Theme ~\Documents\WindowsPowerShell\oh-my-posh-themes\oh-my-posh.geekie.json
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/oh-my-posh.geekie.json" | Invoke-Expression
 ```
 
 ```powershell
