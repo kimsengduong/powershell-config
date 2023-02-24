@@ -1,80 +1,79 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
           "type": "root",
           "style": "plain",
           "foreground": "#26C6DA",
+          "template": " \uf0e7 ",
           "properties": {
-            "root_icon": ""
+            "root_icon": "\ue62a"
           }
         },
         {
-          "foreground": "#ffffff",
-          "style": "plain",
           "type": "session",
-          "properties": {
-            "display_host": false,
-            "user_color": "#dce470"
-          }
-        },
-        {
-          "background": "#91ddff",
-          "foreground": "#100e23",
-          "powerline_symbol": "",
-          "properties": {
-            "prefix": " \uE5FF ",
-            "style": "folder"
-          },
-          "style": "powerline",
-          "type": "path"
-        },
-        {
-          "background": "#36FD87",
-          "foreground": "#610505",
-          "powerline_symbol": "",
-          "style": "powerline",
-          "type": "git",
-          "properties": {
-            "ahead_and_behind_color": "#f26d50",
-            "ahead_color": "#CF61F0",
-            "behind_color": "#f17c37",
-            "display_stash_count": true,
-            "display_upstream_icon": true,
-            "local_changes_color": "#ff9248",
-            "stash_count_icon": " ",
-            "status_colors_enabled": true,
-            "display_status": true,
-            "commit_icon": ""
-          }
-        },
-        {
-          "background": "#906cff",
-          "foreground": "#100e23",
-          "powerline_symbol": "",
-          "properties": {
-            "prefix": "  "
-          },
-          "style": "powerline",
-          "type": "python"
-        },
-        {
-          "background": "#ff8080",
+          "style": "plain",
           "foreground": "#ffffff",
-          "powerline_symbol": "",
+          "template": " {{ if .SSHSession }}\uf817 {{ end }}<#dce470>{{ .UserName }}</> ",
           "properties": {
-            "prefix": ""
-          },
+            "display_host": false
+          }
+        },
+        {
+          "type": "path",
           "style": "powerline",
-          "type": "exit"
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#100e23",
+          "background": "#91ddff",
+          "template": " \ue5ff {{ .Path }} ",
+          "properties": {
+            "style": "folder"
+          }
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#610505",
+          "background": "#36FD87",
+          "background_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#ff9248{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#f26d50{{ end }}",
+            "{{ if gt .Ahead 0 }}#f17c37{{ end }}",
+            "{{ if gt .Behind 0 }}#CF61F0{{ end }}"
+          ],
+          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
+          "properties": {
+            "commit_icon": "\uf417",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          }
+        },
+        {
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#100e23",
+          "background": "#906cff",
+          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "exit",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#ffffff",
+          "background": "#ff8080",
+          "template": "\ue20f{{ if gt .Code 0 }}\uf00d {{ .Meaning }}{{ else }}\uf42e{{ end }} "
         }
       ],
-      "type": "prompt"
+      "newline": true
     }
-  ],
-  "final_space": true
+  ]
 }

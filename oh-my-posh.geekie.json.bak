@@ -1,0 +1,80 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "root",
+          "style": "plain",
+          "foreground": "#26C6DA",
+          "properties": {
+            "root_icon": ""
+          }
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "type": "session",
+          "properties": {
+            "display_host": false,
+            "user_color": "#dce470"
+          }
+        },
+        {
+          "background": "#91ddff",
+          "foreground": "#100e23",
+          "powerline_symbol": "",
+          "properties": {
+            "prefix": " \uE5FF ",
+            "style": "folder"
+          },
+          "style": "powerline",
+          "type": "path"
+        },
+        {
+          "background": "#36FD87",
+          "foreground": "#610505",
+          "powerline_symbol": "",
+          "style": "powerline",
+          "type": "git",
+          "properties": {
+            "ahead_and_behind_color": "#f26d50",
+            "ahead_color": "#CF61F0",
+            "behind_color": "#f17c37",
+            "display_stash_count": true,
+            "display_upstream_icon": true,
+            "local_changes_color": "#ff9248",
+            "stash_count_icon": " ",
+            "status_colors_enabled": true,
+            "display_status": true,
+            "commit_icon": ""
+          }
+        },
+        {
+          "background": "#906cff",
+          "foreground": "#100e23",
+          "powerline_symbol": "",
+          "properties": {
+            "prefix": "  "
+          },
+          "style": "powerline",
+          "type": "python"
+        },
+        {
+          "background": "#ff8080",
+          "foreground": "#ffffff",
+          "powerline_symbol": "",
+          "properties": {
+            "prefix": ""
+          },
+          "style": "powerline",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true
+}
