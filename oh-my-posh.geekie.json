@@ -44,8 +44,8 @@
           "background": "#36FD87",
           "background_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}#ff9248{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#f26d50{{ end }}",
-            "{{ if gt .Ahead 0 }}#f17c37{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#CF61F0{{ end }}",
+            "{{ if gt .Ahead 0 }}#CF61F0{{ end }}",
             "{{ if gt .Behind 0 }}#CF61F0{{ end }}"
           ],
           "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
